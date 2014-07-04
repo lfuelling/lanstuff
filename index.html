@@ -31,6 +31,47 @@
   </head>
 
   <body>
+	<!-- Bootstrap core JavaScript -->
+    <script src="jquery/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/docs.min.js"></script>
+    
+    <!-- Show/Hide Script for the Steps-->   
+	<script type="text/javascript">
+ 
+		$(document).ready(function(){
+ 
+			$(".step2").hide();
+			$(".step3").hide();
+			$(".step1").show();
+ 
+			$('.step1t').click(function(){
+				$("#step1li").attr('class', 'active');
+				$("#step2li").attr('class', 'inactive');
+				$("#step3li").attr('class', 'inactive');
+				$(".step2").hide();
+				$(".step3").hide();
+				$(".step1").show();
+			});
+			$('.step2t').click(function(){
+				$("#step2li").attr('class', 'active');
+				$("#step1li").attr('class', 'inactive');
+				$("#step3li").attr('class', 'inactive');
+				$(".step1").hide();
+				$(".step3").hide();
+				$(".step2").show();
+			});
+			$('.step3t').click(function(){
+				$("#step3li").attr('class', 'active');
+				$("#step1li").attr('class', 'inactive');
+				$("#step2li").attr('class', 'inactive');
+				$(".step2").hide();
+				$(".step1").hide();
+				$(".step3").show();
+			});
+		});
+ 
+	</script>
 
     <div class="site-wrapper">
 
@@ -42,9 +83,9 @@
             <div class="inner">
               <h3 class="masthead-brand">Start</h3>
               <ul class="nav masthead-nav">
-                <li class="active"><a href="#step1">Step 1</a></li>
-                <li class="inactive"><a href="#step2">Step 2</a></li>
-                <li class="inactive"><a href="#step3">Step 3</a></li>
+                <li id="step1li" class="active"><a href="#" class="step1t">Step 1</a></li>
+                <li id="step2li" class="inactive"><a href="#" class="step2t">Step 2</a></li>
+                <li id="step3li" class="inactive"><a href="#" class="step3t">Step 3</a></li>
               </ul>
             </div>
           </div>
@@ -54,6 +95,24 @@
               <p class="lead">We share our files/games using BitTorrent, because it's way faster than handing around an external HDD all the time. So get uTorrent if you dont have it already. It doesn't need to be installed. Just execute and continue with step 2.</p>
               <p class="lead">
                 <a href="download/utorrent.exe" class="btn btn-lg btn-default">Get it!</a>
+              </p>
+            </div>
+          </div>
+          <div class="step2">
+            <div class="inner cover">
+              <h1 class="cover-heading">Lorem Ipsum</h1>
+              <p class="lead">Blah.</p>
+              <p class="lead">
+                <a href="download/utorrent.exe" class="btn btn-lg btn-default">Got it!</a>
+              </p>
+            </div>
+          </div>
+          <div class="step3">
+            <div class="inner cover">
+              <h1 class="cover-heading">Lorem Ipsum</h1>
+              <p class="lead">Blah. Blah. Blah.</p>
+              <p class="lead">
+                <a href="download/utorrent.exe" class="btn btn-lg btn-default">Wat!</a>
               </p>
             </div>
           </div>
@@ -70,11 +129,5 @@
 
     </div>
 
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="jquery/jquery.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/docs.min.js"></script>
   </body>
 </html>
