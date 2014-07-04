@@ -16,30 +16,27 @@
     <!-- Custom styles for this template -->
     <link href="cover.css" rel="stylesheet">
 
-    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
-    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
-    <script src="js/ie-emulation-modes-warning.js"></script>
-
-    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <script src="js/ie10-viewport-bug-workaround.js"></script>
-
-    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
   </head>
 
   <body>
 	<!-- Bootstrap core JavaScript -->
     <script src="jquery/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
-    <script src="js/docs.min.js"></script>
-    
-    <!-- Show/Hide Script for the Steps-->   
+    <!-- Background Video -->
+    <script src="js/jquery.backgroundvideo.min.js"></script>
+     
 	<script type="text/javascript">
  
 		$(document).ready(function(){
+			
+			var videobackground = new $.backgroundVideo($('body'), {
+				"align": "centerXY",
+				"width": 1280,
+				"height": 720,
+				"path": "media/",
+				"filename": "video",
+				"types": ["mp4","ogg","webm"]
+			});
  
 			$(".step2").hide();
 			$(".step3").hide();
@@ -92,7 +89,7 @@
 		  <div class="step1">
             <div class="inner cover">
               <h1 class="cover-heading">Get uTorrent.</h1>
-              <p class="lead">We share our files/games using BitTorrent, because it's way faster than handing around an external HDD all the time. So get uTorrent if you dont have it already. It doesn't need to be installed. Just execute and continue with step 2.</p>
+              <p class="lead">We share our files/games using the BitTorrent protocol, because it's way faster than handing around an external HDD all the time. So get uTorrent if you dont have it already. It doesn't need to be installed and it's just around 2MB in size. Just execute it and continue with step 2.</p>
               <p class="lead">
                 <a href="download/utorrent.exe" class="btn btn-lg btn-default">Get it!</a>
               </p>
@@ -100,8 +97,8 @@
           </div>
           <div class="step2">
             <div class="inner cover">
-              <h1 class="cover-heading">Lorem Ipsum</h1>
-              <p class="lead">Blah.</p>
+              <h1 class="cover-heading">File List</h1>
+              <p class="lead">Blah</p>
               <p class="lead">
                 <a href="download/utorrent.exe" class="btn btn-lg btn-default">Got it!</a>
               </p>
@@ -116,7 +113,6 @@
               </p>
             </div>
           </div>
-          
           <div class="mastfoot">
             <div class="inner">
               <p>Template by <a href="https://twitter.com/mdo">@mdo</a>, modified by <a href="https://twitter.com/kellagroup">@kellagroup</a>.</p>
