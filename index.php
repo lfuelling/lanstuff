@@ -97,7 +97,7 @@
 
           <div class="masthead clearfix">
             <div class="inner">
-              <h3 class="masthead-brand">Start</h3>
+              <h3 class="masthead-brand">Welcome to my LAN-Party</h3>
               <ul class="nav masthead-nav">
                 <li id="step1li" class="active"><a href="#" class="step1t">Step 1</a></li>
                 <li id="step2li" class="inactive"><a href="#" class="step2t">Step 2</a></li>
@@ -117,7 +117,7 @@
           <div class="step2">
             <div class="inner cover">
               <h1 class="cover-heading">File List</h1>
-              <p class="lead" id="viewadv">Here you can see every Torrent file available. Just click the button below and let the magic happen.</p>
+              <p class="lead" id="viewadv">Here you can see every Torrent file available. Just click the button below, pick the games you want and open the torrents with uTorrent.</p>
               <p class="lead">
                 <a href="#" class="btn btn-lg btn-default" id="viewbtn">Get File List</a>
                 <div id="jQ-menu"> 
@@ -173,11 +173,9 @@
           </div>
           <div class="step3">
             <div class="inner cover">
-              <h1 class="cover-heading">Lorem Ipsum</h1>
-              <p class="lead">Blah. Blah. Blah.</p>
-              <p class="lead">
-                <a href="download/utorrent.exe" class="btn btn-lg btn-default">Wat!</a>
-              </p>
+              <h1 class="cover-heading">Seed</h1>
+              <p class="lead">BitTorrent is so fast, because every client which downloads the file also uploads it to other peers. If no one is seeding, you could as well download the file from the server.</p>
+              <p class="lead">Enjoy playing.</p>
             </div>
           </div>
           <div class="mastfoot">
