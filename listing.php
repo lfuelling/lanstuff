@@ -1,6 +1,6 @@
 <?php
 header('Content-Type: text/html');
-$dir = "torrents";
+$dir = $_GET['dir'];
 $start = '';
 
 if(preg_match('/^[a-z0-9-_]+$/', $dir)) {
@@ -43,7 +43,7 @@ function directoryIteratorToArray(DirectoryIterator $it)
 
 $files = directoryIteratorToArray(new DirectoryIterator($start));
 $html = '<ul>' . "\n";
-$base = 'http://' . $_SERVER['HTTP_HOST'] . '/esempi/corso-jquery/';
+$base = 'http://' . $_SERVER['HTTP_HOST'] . '/lanstuff/'; /* -- THIS NEEDS TO BE CHANGED -- */
 
 foreach($files as $dir => $contents) {
 
