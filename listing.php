@@ -14,7 +14,7 @@ if(preg_match('/^[a-z0-9-_]+$/', $dir)) {
 
 
 }
-
+/*
 function directoryIteratorToArray(DirectoryIterator $it) 
 {
     $result = array();
@@ -39,7 +39,7 @@ function directoryIteratorToArray(DirectoryIterator $it)
         }
     }
     return $result;
-}
+}*/
 
 $files = directoryIteratorToArray(new DirectoryIterator($start));
 $html = '<ul>' . "\n";
