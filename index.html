@@ -15,6 +15,8 @@
 
     <!-- Custom styles for this template -->
     <link href="cover.css" rel="stylesheet">
+    <!-- Style for the file list -->
+    <link href="css/jtree.css" rel="stylesheet">
 
   </head>
 
@@ -25,6 +27,8 @@
     <script src="js/bootstrap.min.js"></script>
     <!-- Background Video -->
     <script src="js/jquery.backgroundvideo.min.js"></script>
+    <!-- File List -->
+    <script src="js/jtree.js"></script>
      
 	<script type="text/javascript">
  
@@ -71,22 +75,8 @@
 			$('#viewbtn').click(function(event) {
 	
 				event.preventDefault();
-		
-				var $a = $(this);
-				var href = $a.attr('href');
-				var query = href.substring(href.indexOf('?'), href.length);
-		
-				$.ajax({
-					url: href,
-					dataType: 'html',
-					type: 'GET',
-					data: query,
-					success: function(html) {
-			
-						$('#listing').html(html);
-			
-					}
-				});
+				$("#jtree").show();
+				$("ul.jtree").jtree().jtreeGoTo("torrents/");
 				$("#viewbtn").hide();
 				$("#viewadv").hide();
 	
@@ -126,9 +116,9 @@
               <h1 class="cover-heading">File List</h1>
               <p class="lead" id="viewadv">Here you can see every Torrent file available. Just click the button below and let the magic happen.</p>
               <p class="lead">
-                <a href="listing.php?dir=torrents" class="btn btn-lg btn-default" id="viewbtn">Get File List</a>
-				<div id="listing"></div>
+                <a href="#" class="btn btn-lg btn-default" id="viewbtn">Get File List</a>
               </p>
+              <ul class="jtree" id="jtree"></ul>
             </div>
           </div>
           <div class="step3">
