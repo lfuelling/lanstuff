@@ -67,6 +67,31 @@
 				$(".step1").hide();
 				$(".step3").show();
 			});
+			
+			$('#viewbtn').click(function(event) {
+	
+				event.preventDefault();
+		
+				var $a = $(this);
+				var href = $a.attr('href');
+				var query = href.substring(href.indexOf('?'), href.length);
+		
+				$.ajax({
+					url: href,
+					dataType: 'html',
+					type: 'GET',
+					data: query,
+					success: function(html) {
+			
+						$('#listing').html(html);
+			
+					}
+				});
+				$("#viewbtn").hide();
+				$("#viewadv").hide();
+	
+			});
+
 		});
  
 	</script>
@@ -99,9 +124,10 @@
           <div class="step2">
             <div class="inner cover">
               <h1 class="cover-heading">File List</h1>
-              <p class="lead">Blah</p>
+              <p class="lead" id="viewadv">Here you can see every Torrent file available. Just click the button below and let the magic happen.</p>
               <p class="lead">
-                <a href="download/utorrent.exe" class="btn btn-lg btn-default">Got it!</a>
+                <a href="listing.php?dir=torrents" class="btn btn-lg btn-default" id="viewbtn">Get File List</a>
+				<div id="listing"></div>
               </p>
             </div>
           </div>
