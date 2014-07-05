@@ -1,0 +1,18 @@
+body {
+	font-family: "Trebuchet MS", Helvetica, Sans-Serif;
+	font-size: 14px;
+}
+
+#jQ-menu ul {
+	list-style-type: none;
+}
+
+#jQ-menu a, #jQ-menu li {
+	color: gray;
+	text-decoration: none;
+	padding-bottom: 3px;
+}
+
+#jQ-menu ul {
+	padding-left: 15px;
+}
