@@ -3,7 +3,7 @@ header('Content-Type: text/html');
 $dir = "torrents";
 $start = '';
 
-if(preg_match('/^[a-z0-9-_]+$/', $dir)) {
+/*if(preg_match('/^[a-z0-9-_]+$/', $dir)) {
 
 	$start = $dir;
 
@@ -13,7 +13,7 @@ if(preg_match('/^[a-z0-9-_]+$/', $dir)) {
 	exit();
 
 
-}
+}*/
 
 function directoryIteratorToArray(DirectoryIterator $it) 
 {
