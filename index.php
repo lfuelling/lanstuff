@@ -49,7 +49,7 @@
 			$(".step2").hide();
 			$(".step3").hide();
 			$(".step1").show();
-			$("#mymenu").hide();
+			$("#jQ-menu").hide();
  
 			$('.step1t').click(function(){
 				$("#step1li").attr('class', 'active');
@@ -79,6 +79,7 @@
 			$('#viewbtn').click(function(event) {
 	
 				event.preventDefault();
+				$("#jQ-menu").show();
 				$("#viewbtn").hide();
 				$("#viewadv").hide();
 	
