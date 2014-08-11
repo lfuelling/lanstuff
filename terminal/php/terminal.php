@@ -1,7 +1,7 @@
 <?php
 require('json_rpc.php');
  
-class shell {
+class Demo {
   static $login_documentation = "return auth token";
   public function login($user, $passwd) {
     if (strcmp($user, 'root') == 0 &&
@@ -48,5 +48,5 @@ class shell {
   }
 }
  
-handle_json_rpc(new shell());
+handle_json_rpc(new Demo());
 ?>
